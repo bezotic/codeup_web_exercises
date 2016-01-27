@@ -1,0 +1,29 @@
+.container{
+	padding:30px;
+	color:#E6E6E6;
+	text-align: center;
+	
+
+}
+
+body{
+	background-image: url(/img/josue.jpg);
+	
+	
+
+
+}
+
+.about-me{
+	color:#E6E6E6;
+	text-align: center;
+}
+
+#start-end-date{
+	position:relative;
+	left: 300px;
+	bottom: 50px;
+	font-family: 'Oswald', sans-serif;
+	color: #819FF7;
+}
+

@@ -1,0 +1,98 @@
+.box{
+	float: left;
+
+}
+.box::after{
+		content:url(http://app.codeup.com/content/img/css/codeup-arrow.png);
+		position: relative;
+		bottom:90px;
+		left: 40px;
+}
+.pic{
+	position: relative;
+
+}
+
+.red {
+	width: 50px;
+	height: 50px;
+	padding:10px;
+	margin-top: 50px;
+	margin-right:50px;
+	border:1px solid black;
+	background-color: red;
+	color: white;
+	
+}
+
+.orange {
+	width: 50px;
+	height: 50px;
+	padding:10px;
+	margin-top: 50px;
+	margin-right:50px;
+	border:1px solid black;
+	background-color: orange;
+	color: white;
+}
+
+.yellow{
+	width: 50px;
+	height: 50px;
+	padding:10px;
+	margin-top: 50px;
+	margin-right:50px;
+	border:1px solid black;
+	background-color: yellow;
+	color: grey;
+
+}
+
+.green{
+	width: 50px;
+	height: 50px;
+	padding:10px;
+	clear: left;
+	margin-top: 50px;
+	margin-right:50px;
+	border:1px solid black;
+	background-color: green;
+	color: white;
+
+
+}
+
+.blue{
+	width: 50px;
+	height: 50px;
+	padding:10px;	
+	margin-top: 50px;
+	margin-right: 50px;
+	border:1px solid black;
+	background-color: blue;
+	color: white;
+
+}
+
+
+
+
+.violet{
+	width: 50px;
+	height: 50px;
+	padding:10px;	
+	margin-top: 50px;
+	margin-right:50px;
+	border:1px solid black;
+	background-color: violet;
+	color: white;
+
+
+	
+}
+
+
+
+
+
+

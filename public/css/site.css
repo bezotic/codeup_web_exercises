@@ -1,0 +1,30 @@
+.fancy-header {
+    color: blue; 
+    text-decoration: underline;
+}
+.extra-large {
+	font-size: 100px;
+}
+
+#hood-lum,#chasm {
+	color:red;
+	background-color: pink;
+	text-decoration: underline;
+}
+ 
+ h2 {
+ 	color: pink;
+ }
+
+
+h4 {
+	color: violet;
+}
+.navbar {
+	color: green;
+	text-decoration: underline;
+}
+nav:hover {
+	background-color: green;
+	color: yellow;
+}
