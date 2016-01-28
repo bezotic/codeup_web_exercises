@@ -1,14 +1,44 @@
-body{
-	
+body {
+	min-height: 100%;
+    background:
+		url("/img/tokyo.jpeg");
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 
 
-.container{
-	color:blue;
-	font-family: 'Lora', serif;
+.about-me {
+	text-align:center;
 }
 
-.ol{
-	color:green;
+.richard {
+	height:200px;
+	width:125px;
+	position:relative;
+	top:5px;
+	float:left;
+	position-height:20px;
+	border-radius:20px;
 }
+
+#carousel-example-generic {
+	position:relative;
+	top:150px;
+	height: 150px;
+
+}
+
+ .btn-default {
+	margin:10px  ;
+}
+
+.sign-up {
+	margin:10px;
+}
+
+
+
+
+
+
