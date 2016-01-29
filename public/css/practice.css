@@ -22,20 +22,27 @@ body {
 	border-radius:20px;
 }
 
-#carousel-example-generic {
-	position:relative;
-	top:150px;
-	height: 150px;
-
-}
 
  .btn-default {
 	margin:10px  ;
 }
 
-.sign-up {
-	margin:10px;
+.jumbotron {
+	opacity: 0.6;
+	position:relative;
+	top:225px;
+	left:500px;
+	height:200px;
+	width:250px;
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	
 }
+
+.images {
+
+}
+
 
 
 
