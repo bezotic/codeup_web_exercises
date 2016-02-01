@@ -34,3 +34,11 @@ var mycolor = (color==favorite) ? favorite + "it caught blue which is my favorit
 // if/else example
 
 
+var i = 0;
+
+while (i < 10) {
+	console.log(i);
+	i++;
+}
+console.log('done');
+

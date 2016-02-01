@@ -4,6 +4,7 @@ body {
 		url("/img/tokyo.jpeg");
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 
@@ -12,15 +13,7 @@ body {
 	text-align:center;
 }
 
-.richard {
-	height:200px;
-	width:125px;
-	position:relative;
-	top:5px;
-	float:left;
-	position-height:20px;
-	border-radius:20px;
-}
+
 
 
  .btn-default {
@@ -39,11 +32,51 @@ body {
 	
 }
 
-.images {
+p {
+	position:relative;
+	left:48px;
+}
+
+.btn .btn-primary .btn-lg {
+	position:relative;
+	top:225px;
+
+}
+
+#pics {
+	position:relative;
+	top:0px;
+	left:200px;
+	width:900px;
+	height: 200px;
+
 
 }
 
 
+.caption {
+	overflow:auto;
+    white-space: nowrap;
+    
+}
+
+h3 {
+	text-align: center;
+}
+
+.cash {
+	position:relative;
+	width: 100%;
+	left:10px;
+	top: 0px;
+	bottom: 0px;
+}
+
+.cash2 {
+	opacity: 1;
+	background-color: rgba(255,255,255,0.0) !important;
+	padding-top: 25px !important;
+}
 
 
 

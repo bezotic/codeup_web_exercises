@@ -1,0 +1,50 @@
+
+
+ul {
+    list-style-type: square;
+    margin: 0;
+    padding: 10px;
+    height: 100px;
+
+    overflow: hidden;
+    background-color: #000000
+
+}
+
+li {
+    float: left;
+    font-color:#b3b3b3;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.container {
+	background-color: #b3b3ff;
+	padding:30px;
+	text-align: center;
+
+
+}
+
+h3 p {
+	font-family: 'Inconsolata', ;
+}
+
+.me {
+	background-image:url(/img/josue.jpg);
+	margin:10px;
+	width: 1000px;
+	height: 700px;
+
+}
+
+
+
+
+
