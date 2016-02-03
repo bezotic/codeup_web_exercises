@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Break Continue</title>
+</head>
+<body>
+<script>
+'strict'
+
+	var randNum = 0;
+			while (randNum % 2 == 0) {
+			 	randNum = Math.floor((Math.random()*50)+1);
+
+}
+
+console.log("Random odd number to skip is " + randNum);
+			for (var i = 1; i < 50; i += 2) {
+				if (i == randNum) { 
+					console.log ("Yipes! Skipping number " + randNum);
+				} else if (i != randNum) {
+					console.log("Here is an odd number: " + i);
+				}
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//console.log('Random stopping point is: ' + random);
+
+//for (var i = 1; i < 100; i++) {
+
+    //console.log('Loop counter is: ' + i);
+
+    //if (random == i) {
+
+       // console.log('We have reached the random stopping point: break!');
+
+        // use the break keyword to exit from the while loop
+        //break;
+
+        // nothing after the break will get processed
+        //console.log('You will never see this line.');
+   // }
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
+function add(a, b){
+	console.log(a + b);
+}
+add(2, 2);
+
+
+function add(a, b) {
+	var result = a + b;
+	return result;
+}
+var result = add(2, 2)
+console.log(result);

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fuctions</title>
+</head>
+<body>
+<script>	
+var myNameIs = 'Richard'; // todo: Fill in your name here.
+
+// todo:
+// Create a function called 'sayHello' that takes a parameter 'name'.
+// When called, the function should log a message that says hello from the passed in name.
+
+// todo: Call the function 'sayHello' passing the variable 'myNameIs' as a parameter.
+
+// do not worry about the details of this line
+// just know that it generates a random number between 1 and 100
+var random = Math.floor((Math.random()*100)+1);
+
+// todo:
+// Create a function called 'isOdd' that takes a number as a parameter.
+// The function should use the ternary operator to log a message.
+// The log should tell the number passed in and whether it is odd or not.
+
+// todo: Call the function 'isOdd' passing the variable 'random' as a parameter.
+
+
+
+function sayHello(name) {
+	var output = "Hello from " + name;
+	return output;
+}
+var result = sayHello(myNameIs)
+console.log(result);
+
+
+
+
+ sayHello(name);
+
+
+var random = Math.floor((Math.random()*100)+1);
+		
+		function isOdd(random) {
+			var message = (random % 2 != 0) ? "Number is odd." : "Number is even.";
+			return message;
+		}
+		console.log('The number generated is ' + random);
+		console.log(isOdd(random));
+
+ 
+
+
+
+
+
+</script>
+</body>
+</html>
+
+Function- is a reusable block of code
+		- reusable block of code with a name
+		- lil' robot ( take in data and do stuff to it, return data)
+
+Why
+	- saves time
+	- convenient b/c we call the function to run later.
+	- more readable code
+	- accessibility
+	- modularity
+
+where
+	- function definitions at the top of our code
+	- function calls anywhere we need the return value
+
+
+
+#Anatomy of a function definition
+function sayGoodMorning(name) {
+	return "Good morning";
+}
+
+#Calling or running a function
+var message = sayGoodMorning('Richard');
+console.log(message);
+
+message = sayGoodMorning('Bob');
+console.log(message);
+
+Return Values
+
+function square(n) {
+	
+	if(isNaN(n)) {
+	console.log(n + ' is not a number');
+	return false;
+	}
+	return n * n;
+}
+
+function sumOfSquares(a,b) {
+	return square(a) + square(b);
+}
+
+
+function differenceOfSquares(a,b) {
+	return square(a) - square(b);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
