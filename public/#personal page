@@ -25,3 +25,21 @@ picture for a single product.
 
 -embed link to your facebook/twitter
 -embed a youtube video
+
+do {
+	var userName = prompt ('Please input your name');
+	console.log(userName);
+	
+	if(userName == '' || userName == null) {
+
+	console.log('Please input your name, do not save blank data');
+}
+} while (userName == '' || userName == null);
+
+
+var i = 2;
+
+while (i < 66000) {
+    console.log(i);
+    i+=i;		
+}

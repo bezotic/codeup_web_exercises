@@ -1,27 +1,58 @@
+<!DOCTYPE html>
+<html lang ="english">
+<head>
+	<meta charset="utf-8">
+	<title>While loop</title>
+</head>
+<body>
+
 <script>
 
-var i = 2;
 
-while (i < 66000) {
-    console.log(i);
-    i+=i;
+var i = 2;
+while(i <= 66000) {
+	console.log(i);
+
+ i+=i;		
+	
 }
 
-</script>
+var i = 4;
 
- 2
- 4
- 8
- 16
- 32
- 64
- 128
- 256
- 512
- 1024
- 2048
- 4096
- 8192
- 16384
- 32768
- 65536
+while(i<= 100) {
+	console.log(i);
+	i+=i;
+}
+
+
+
+
+
+
+
+</script>
+</body>
+<html>
+
+
+
+
+do {
+	var userName = prompt ('Please input your name');
+	console.log(userName);
+	
+	if(userName == '' || userName == null) {
+
+	console.log('Please input your name, do not save blank data');
+}
+} while (userName == '' || userName == null);
+
+
+var i = 0;
+while(i<=5){
+	console.log(i);
+}
+
+for(var i=0; i<=5; i++) {
+	console.log(i);
+}

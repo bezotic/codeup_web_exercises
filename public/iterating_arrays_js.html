@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Arrays</title>
+</head>
+<body>
+<script>	
+'strict'
+var names = ['richard', 'andy', 'kyle', 'matthew'];
+	console.log('There are ' + names.length + ' elements');{
+	console.log('The first name is ' + names[0]);
+	console.log('The first name is ' + names[1]);
+	console.log('The first name is ' + names[2]);
+	console.log('The first name is ' + names[3]);
+	console.log('the very last name is' + names[names.length   -1]);
+}
+var names = ['richard', 'andy', 'kyle', 'matthew'];
+for(var i= 0; i < names.length; i++) {
+	console.log('the name ' + i + 'is ' + names[i]);
+}
+var names = ['richard', 'andy', 'kyle', 'matthew'];
+names.forEach(function(element, index, array) {
+		console.log('the name ' + index + 'is ' + element);
+});
+
+
+var colors = ['blue', 'yellow', 'green', 'red'];
+
+colors.forEach(function(color, index, array) {
+		console.log('the color ' + index + 'is ' + color);
+});
+
+console.log(colors);
+colors.reverse();
+console.log(colors);
+
+console.log(colors);
+colors.sort();
+console.log(colors);
+
+
+
+
+</script>
+</body>
+</html>
+

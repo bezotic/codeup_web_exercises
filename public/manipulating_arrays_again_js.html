@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>How I love arrays</title>
+</head>
+<body>
+<script>	
+'strict'
+
+var colors = ['green', 'blue', 'yellow', 'orange', 'red', 'purple', 'indigo'];
+
+function logcolors() {
+	console.log('Here are the colors ' + colors.length);
+	console.log(colors);
+}
+
+
+console.log('Adding "black" to the beginning of the colors array.');
+colors.unshift('black');
+// todo: Do what the log statement above says you will do.
+logcolors();
+
+console.log('Removing "black" from the color array');
+colors.shift('black');
+logcolors();
+
+console.log('adding "maroon" to the back of the colors array.');
+colors.push('maroon')
+logcolors();
+
+console.log('Removing "maroon" from the back of the color arrays');
+colors.pop()
+logcolors();
+
+console.log('finding and logging the index of "yellow"');
+var index = colors.indexOf('yellow');
+console.log(index);
+logcolors();
+
+console.log('Put the colors in reverse order');
+colors.reverse();
+logcolors();
+
+console.log('put the colors back in order');
+colors.sort();
+logcolors();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
