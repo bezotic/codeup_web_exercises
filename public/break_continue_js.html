@@ -9,21 +9,18 @@
 'strict'
 
 	var randNum = 0;
-			while (randNum % 2 == 0) {
-			 	randNum = Math.floor((Math.random()*50)+1);
+	while (randNum % 2 == 0) {
+	 	randNum = Math.floor((Math.random()*50)+1); //looping out the even numbers
+	}
 
-}
-
-console.log("Random odd number to skip is " + randNum);
-			for (var i = 1; i < 50; i += 2) {
-				if (i == randNum) { 
-					console.log ("Yipes! Skipping number " + randNum);
-				} else if (i != randNum) {
-					console.log("Here is an odd number: " + i);
-				}
-			}
-
-
+	console.log("random odd numbers to skip " + randNum);
+	for(var i = 1; i < 50; i+=2){
+		if(i == randNum) {
+			console.log ("Yikes skipping number " + randNum);
+		} else if (i != randNum) {
+			console.log("here is an even number " + i);
+		}
+	}
 
 
 

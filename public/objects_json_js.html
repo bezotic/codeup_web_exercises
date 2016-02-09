@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>objects Json</title>
+</head>
+<body>
+<script>	
+'use strict';
+// todo:
+// Create an array of objects that represent books.
+// Each book should have a title and an author.
+// The book author should be an object with a firstName and lastName.
+// Be creative and add at least 5 books to the array
+// var books = [todo];
+
+// log out the books array
+
+var books = [
+			
+			 {
+				"title": "Gravity's Rainbow",
+				"author": {
+					"firstName": "Thomas",
+					"lastName": "Pynchon"
+				}
+			},
+			{
+				"title": "The Aleph",
+				"author": {
+					"firstName": "Jorge Luis",
+					"lastName": "Borges",
+				}
+			},
+			{
+				"title": "Labyrinths",
+				"author": {
+					"firstName": "Jorge Luis",
+					"lastName": "Borges",
+				}
+			},
+			{
+				"title": "A House In The Country",
+				"author": {
+					"firstName": "Jose",
+					"lastName": "Donoso",
+				}
+			},
+			{
+				"title": "Blow-Up",
+				"author": {
+					"firstName": "Julio",
+					"lastName": "Cortazar",
+
+				}
+			}
+		];
+
+
+
+
+console.log(books);
+
+// todo:
+// Loop through the array of books using .forEach and print out the specified information about each one.
+// start loop here
+books.forEach(function(book, index, array) {
+	console.log("Book number is " + (index +1));
+    console.log("title is " +  book.title);
+    console.log("author is " + book.author.firstName + ' ' + book.author.lastName);
+    console.log("---"); 
+    if(index < array.length -1) { // Removes the last --- of the book.
+		console.log("---");
+	}
+
+});
+
+var book = books[0];
+
+    console.log("title is " +  book.title);
+    console.log("author is " + book.author.firstName + ' ' + book.author.lastName);
+    console.log("---");
+// end loop here //  when stuck on a forEach. work on one array, figure it out and add it back to the for each.
+	
+
+
+	//desired output should look like the following:
+	// Assemble an aaray of strings that hold the entire info
+	//[
+	//"Infinite Jest was written by David Foster Wallace"
+
+//	]
+
+var arrayOfString = [];
+// Objective is to assemble an array of strings that hold the entire info.
+// step 1. Assemble and array of strings that hold the entire info
+// step 2. Iterate across our array of books objects
+// step 3. concatenate pieces of strings from the book object
+// step 4. push the concatenated string onto the arrayOfStrings array.
+// step 5. Iterate across your new array to console.log each string.
+
+var string = ' ';
+books.forEach(function(book, index, array) {
+	string = ('The book ' + book.title + " Was written by " + book.author.firstName + " "  + book.author.lastName);
+	arrayOfString.push(string);
+
+}); 
+
+arrayOfString.forEach(function(string,index,array){
+	console.log(string);
+});
+
+
+var book = books[0];
+console.log('The book ' + book.title + " Was written by " + book.author.firstName + " "  + book.author.lastName);
+console.log("---");
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

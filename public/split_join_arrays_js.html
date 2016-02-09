@@ -24,6 +24,22 @@ console.log(planetsAsArray);
 
 
 
+function join(array, delimeter) {
+var string = "";
+
+array.forEach(function(array, index) {
+	string = string + array + delimeter;
+});
+
+return string;
+
+
+}
+
+var result = join(planets, ', ');
+console.log(result);
+
+
 
 
 

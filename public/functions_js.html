@@ -34,22 +34,33 @@ function sayHello(name) {
 var result = sayHello(myNameIs)
 console.log(result);
 
+sayHello(name);
 
 
-
- sayHello(name);
 
 
 var random = Math.floor((Math.random()*100)+1);
-		
-		function isOdd(random) {
-			var message = (random % 2 != 0) ? "Number is odd." : "Number is even.";
-			return message;
-		}
-		console.log('The number generated is ' + random);
-		console.log(isOdd(random));
 
- 
+function isOdd(random) {
+	var output = (random % 2 != 0) ? "This number is odd " : "This number is even ";
+	return output;
+}
+console.log("The number is " + random);
+console.log(isOdd(random));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>object</title>
+</head>
+<body>
+<script>
+'use strict';	
+
+var car = {
+
+	"make": 'chevy',
+	'model': 'Corvette',
+	'years' : [1999, 1985, 1987],
+	'honk' : function	() {
+		return 'Honk Honk';
+	},
+	'getMakeAndModel' : function() {
+		return " The car is a "  + this.make + ' ' + this.model;
+	},
+	
+	'getFirstYear' : function() {
+		var yearsInOrder = this.years.sort();
+		return yearsInOrder[0];
+	}
+
+}
+
+console.log(car.getMakeAndModel());
+
+var cars = {
+	"f-150" : {
+		"wheels" : 4,
+		"make" : "ford",
+		"model" : "f-150",
+		"spare" : true,
+		"transmission" : "Automatic"
+	},
+	"mazda 3" :{
+		"wheels" : 4,
+		"make" : "mazda",
+		"model" : "mazda 3",
+		"spare" : true,
+		"transmission": "Manual"
+		"passengers" : [
+		"cameron",
+		"Riley",
+		"camerons's mom",
+		"mars",
+
+		]
+	}
+}
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

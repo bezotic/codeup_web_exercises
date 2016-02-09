@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>back to the basics</title>
+</head>
+<body>
+<h1>Let's start over bruh</h1>
+<script>	
+'strict';
+//Use Math.floor((Math.random()*50)+1) to generate a random number betweem 1 and 50. If the number isn't odd, keep getting a new random number till it is odd.
+//Use console.log to log all the odd numbers from 1 to 50, except the random odd number you generated, by using break and continue. Try to match the output shown below (your random number will be different)
+
+
+
+
+
+
+
+
+
+var randNum = 0;
+while (randNum % 2 == 0) {
+randNum = Math.floor((Math.random()*50)+1)
+}
+
+console.log("Here is an odd number to skip " + randNum);
+for ( var i = 1; i < 50; i += 2) {
+	if ( i == randNum) {
+		console.log("yikes skipping number" + randNum);
+	} else if (i != randNum) {
+		console.log("Here is an odd number " + i);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+for (var i = 2; i <= 10; i = i + 2) {
+	console.log(i);
+}
+
+
+
+
+
+for (var i = 1; i <= 25; i++) {
+	console.log(i);
+}
+
+
+
+for (var i = 2; i < 25; i += 2) {
+	console.log(i);
+}
+
+for (var i = 2; i <= 25; i++) {
+	if (i % 2 != 0) {
+		console.log(i);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+body {
+	background-color: black;
+}
+
+h1 {
+	font-size: 40px;
+	color:red;
+	text-align: center;
+}
+
+.warning {
+	color:white;
+	padding-right: 400px;
+}
+
+h3 {
+	color:green;
+}
+
+.time {
+	color:white;
+}
+
+
+.money-store {
+	color:green;
+	top: 0px;
+	bottom: 0px;
+	margin-right:10px;
+}
+
+.fbi {
+	position:absolute;
+	right: 0px;
+}
