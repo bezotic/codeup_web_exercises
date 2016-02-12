@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <style type="text/css">
+       #map-canvas {
+           width: 770px;
+           height: 481px;
+           background-color: grey;
+        }
+     </style>
+	<meta charset="UTF-8">
+
+	<title>ike maps</title>
+</head>
+<body>
+
+  
+ <div id="map-canvas"></div>
+	
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVHykYeA_nKVY_sBUNZphArU-yEvT0684"></script>
+
+
+ <script type="text/javascript">
+    (function() {
+        "use strict";
+
+        
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 18,
+
+            // This sets the center of the map at our location
+            center: {
+                lat:  29.4284595,
+                lng: -98.492433
+            },
+            mapTypeId: google.maps.MapTypeId.SATTELITE
+        };
+
+        
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+        var addressLookerUpper = new google.maps.Geocoder()
+
+        var codeupAddress = "600 navarro, San Antonio,TX";
+
+        addressLookerUpper.geocode({address: codeupAddress}, function(results, status){
+        	if (status == google.maps.GeocoderStatus.OK) {
+        		console.log(results);
+
+        		map.setCenter(results[0].geometry.location);
+        	
+        		var marker = new google.maps.Marker({
+        			"map": map,
+        			"position":results[0].geometry.location,
+        		});
+
+        		var codeupInfo = google.maps.InfoWindow({
+        			content: "Changing the world, one programmer at a time."
+        		});
+
+        		codeupInfo.open(map, marker);
+        	}
+        	
+        });
+
+        var bigaAddress = "203 S St Mary's St, San Antonio, TX 78205";
+
+        addressLookerUpper.geocode({address: bigaAddress}, function(results,status){
+        	if (status == google.maps.GeocoderStatus.OK) {
+        		var marker = new google.maps.Marker({
+        		"map": map,
+        		"position": results[0].geometry.location,
+        	});
+
+        	var bigaInfo = new google.maps.InfoWindog({
+        		content: "<h1>Biga on the Bank"</h1><p>"Bring Money"</p>
+        	});
+        	
+        	bigaInfo.open(map, marker);
+        	
+        	}
+        
+        });
+    
+    })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style type="text/css">
+       #map-canvas {
+           width: 980px;
+           height: 700px;
+           background-color: grey;
+        }
+		
+		body {
+			background:url(/img/crimsonKing.jpg);
+		}
+  		
+  		h1 {
+  			color:white !important;
+  		}
+</style>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	<title>Places I eats</title>
+</head>
+<body>
+ 	<h1>Places I eat When I eats</h1>	
+	 <div class ="zoomButtons">
+		<button type="button" id="zoom5" class="btn btn-success">5</button>
+		<button type="button" id="zoom15" class="btn btn-success">15</button>
+		<button type="button" id="zoom20" class="btn btn-success">20</button>
+		<button type="button" id="alternateDimension" class="btn btn-success">Alternate Dimension</button>
+
+	 </div>
+ 
+	 <div id="map-canvas"></div>
+		
+	 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVHykYeA_nKVY_sBUNZphArU-yEvT0684"></script>
+
+
+	 <script type="text/javascript">
+	    (function() {
+	        "use strict";
+
+	        // Set our map options
+	        var mapOptions = {
+	            // Set the zoom level
+	            zoom: 10,
+
+	            // This sets the center of the map at our location
+	            center: {
+	                lat:  29.4284595,
+	                lng: -98.492433
+	        },
+
+	        mapTypeId: google.maps.MapTypeId.HYBRID
+	    }
+
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    	
+    	var addressFinder = new google.maps.Geocoder();
+
+    	var hotJoyAddress = " 1014 S Alamo St, San Antonio, TX 78210 ";
+
+    	addressFinder.geocode({"address": hotJoyAddress}, function(results,status){
+    		if (status == google.maps.GeocoderStatus.OK) {
+    			console.log(results);
+    			map.setCenter(results[0].geometry.location);
+    		
+    			var marker = new google.maps.Marker({
+        			"map": map,
+        			"position":results[0].geometry.location,
+        			animation: google.maps.Animation.DROP
+
+				});
+        		
+        		var hotJoyInfo = new google.maps.InfoWindow({
+    			content: "They have spam fried rice!"
+    			
+        		});
+        		
+        		marker.addListener('click', function() {
+    			hotJoyInfo.open(map, marker);
+  				});
+
+    		}
+
+    	});
+
+    	var gorrosAddress = "2619 Mossrock, San Antonio, TX 78230";
+
+    	addressFinder.geocode({"address": gorrosAddress}, function(results,status){
+    		if(status == google.maps.GeocoderStatus.OK) {
+    			var marker = new google.maps.Marker({
+        		"map": map,
+        		"position": results[0].geometry.location,
+        		 animation: google.maps.Animation.DROP
+        	});
+
+    		var gorrosInfo = new google.maps.InfoWindow({
+    		content: "Get the whatever roll. <img src ='/img/sushi.gif'>" 
+
+    		});
+    		marker.addListener('click', function() {
+    			gorrosInfo.open(map, marker);
+  				});
+    		
+    	    }
+
+    	});
+
+   		var myMomAddress = "424 Balboa Ave, San Antonio, TX 78237";
+
+    	addressFinder.geocode({"address": myMomAddress}, function(results,status){
+    		if(status == google.maps.GeocoderStatus.OK) {
+    			var marker = new google.maps.Marker({
+        		"map": map,
+        		"position": results[0].geometry.location,
+        		 animation: google.maps.Animation.DROP
+        	});
+
+    		var homeInfo = new google.maps.InfoWindow({
+    		content: "<h3>It's free.</h3>  <p> I like homecooking</p> <img src ='/img/chicken.jpg'>"
+
+    		});
+    		marker.addListener('click', function() {
+    			homeInfo.open(map, marker);
+  				});
+    		
+    	    }
+   		}); 
+
+    	var zoomFive = document.getElementById("zoom5");
+    	var zoomFifteen = document.getElementById("zoom15");
+    	var zoomTwenty = document.getElementById("zoom20");
+    	var dimension = document.getElementById("alternateDimension");
+    	
+    	function changeZoom (event) {
+    		map.setZoom(parseInt(this.innerText))
+    		console.log(this.innerText);
+    	}
+
+    	function space (event) {
+    		window.open("space.html");
+    	}
+
+    	zoomFive.addEventListener('click', changeZoom) 	
+    	zoomFifteen.addEventListener('click', changeZoom)
+    	zoomTwenty.addEventListener('click', changeZoom)
+    	dimension.addEventListener('click', space)
+    })();
+</script>
+</body>
+</html>

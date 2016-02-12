@@ -47,3 +47,58 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <button> id = 'button1' data-btn='1'>Click Me!</button>
+    <button>id = 'button2' data-btn='2'</button>
+     <button>id = 'button3' data-btn='3'</button>
+
+    <script>
+    var buttons = document.getElementsByTagName('button');
+
+        // create a handler function
+        var listener = function (event) {
+            var html = event.target.innerHTML;
+            html = html.toUpperCase();
+            console.log(event.target);
+        }
+
+        // register the listener to handle clicks on btn1
+       for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', listener);
+       }
+
+    </script>
+</body>
+</html>
+
+
+
+document.getElementsByTagName('button')[0].addEventListener
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/css/calculator_js.css">
+	<link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+	<title>calculator</title>
+</head>
+
+<body>
+
+<h2>Use this power wisely. Don't let it consume you.</h2>
+
+	<div class ='equator'>	
+		<input id ='left' type = 'text' readonly>
+		<input id ='center' type = 'text' readonly>
+		<input id ='right' type = 'text' readonly>
+	</div>
+	
+	<div class ='container'>
+	<div class ='row'>
+		<button class ='number' id = 'button1' value = '1'> 1 </button>
+		<button class ='number' id = 'button2' value = '2'> 2 </button>
+		<button class ='number' id = 'button3' value = '3'> 3 </button>
+		<button id = 'buttonAddition' value = '+'> + </button>
+	</div>
+
+	<div class ='row2'>
+	<button class ='number' id = 'button4' value = '4'> 4 </button>
+	<button class ='number' id = 'button5' value = '5'> 5 </button>
+	<button class ='number' id = 'button6' value = '6'> 6 </button>
+	<button id = 'buttonSubtraction' value = '-'> - </button>
+	</div>
+
+	<div class ='row3'>
+	<button class ='number' id = 'button7' value = '7'> 7 </button>
+	<button class ='number' id = 'button8' value = '8'> 8 </button>
+	<button class ='number' id = 'button9' value = '9'> 9 </button>
+	<button  id = 'buttonMultiply' value = '*'> * </button>
+	</div>
+
+	<div class ='row4'>
+	<button class ='number' id = 'buttonC' value =''> C </button>
+	<button class ='number' id = 'button0' value ='0'> 0 </button>
+	<button  id = 'button-equals' value ='='> = </button>
+	<button  id = 'buttonDivision' value ='division'> / </button>
+	</div>
+	
+	</div>
+
+<script>
+"strict";
+
+// we need the ability to click buttons
+// when we press a button, value to go to the screen
+// 'click handler'
+//if number, then add to right or left display
+//if operator button, then add to center display
+//calculate the result when the = is pressed
+// if middle and right displays are empty, add numbers to left
+//if middle or left display are not-empty, add numbers to right
+// avoid NaN, undefined, and null
+// need even listeners registered on all the buttons
+
+var inputLeft = document.getElementById('left');
+var inputCenter = document.getElementById('center');
+var inputRight = document.getElementById('right');
+	
+var numberField = inputLeft;
+
+
+
+var plus = document.getElementById('buttonAddition');
+var minus = document.getElementById('buttonSubtraction');
+var multiply = document.getElementById('buttonMultiply');
+var division = document.getElementById('buttonDivision');
+var equals = document.getElementById('button-equals');
+var remove = document.getElementById('buttonC');
+
+//var button_0 = document.getElementById('button0');
+//var button_1 = document.getElementById('button1'); //Created a for loop, grabbed all the numbers 
+//var button_2 = document.getElementById('button2'); // by their class name. did not need to grab
+//var button_3 = document.getElementById('button3'); // elements by id
+//var button_4 = document.getElementById('button4');
+//var button_5 = document.getElementById('button5');
+//var button_6 = document.getElementById('button6');
+//var button_7 = document.getElementById('button7');
+//var button_8 = document.getElementById('button8');
+//var button_9 = document.getElementById('button9');
+var stackingNumbers = document.getElementsByClassName('number');
+for (var i = 0; i < stackingNumbers.length; i++) {
+			stackingNumbers[i].addEventListener("click", addNumberToScreen);
+			stackingNumbers[i].addEventListener("click", addNumberToRight);
+		}
+
+
+function addNumberToScreen(event) {
+		if (inputCenter.value == '' && inputRight.value == '') {
+			numberField.value += this.getAttribute('value');
+		}}
+
+function addNumberToRight(event) {
+	if (numberField.value != '' && inputCenter.value != '') {
+		inputRight.value += this.getAttribute('value');
+	}
+}
+
+function getDemOperators(event) {
+	if  (numberField.value != '') {
+		inputCenter.value = this.innerHTML;
+	}
+
+
+}
+
+function equaliBruh(event) {
+	if (inputCenter.value.trim() == '+') {
+		inputRight.value = parseFloat(numberField.value) + parseFloat(inputRight.value);
+	} else if (inputCenter.value.trim() == '-') {
+		inputRight.value = parseFloat(numberField.value) - parseFloat(inputRight.value);
+	} else if (inputCenter.value.trim() == '*') {
+		inputRight.value = parseFloat(numberField.value) * parseFloat(inputRight.value);
+	} else if (inputCenter.value.trim() == '/') {
+		inputRight.value = parseFloat(numberField.value) / parseFloat(inputRight.value);
+	} 
+
+	
+}
+
+function getRidOfIt(event) {
+		numberField.value = '';
+		inputCenter.value = '';
+		inputRight.value = '';
+	
+		
+	
+}
+
+		plus.addEventListener('click', getDemOperators) 	
+		minus.addEventListener('click', getDemOperators)
+		division.addEventListener('click', getDemOperators)
+		multiply.addEventListener('click', getDemOperators)
+		equals.addEventListener('click', equaliBruh)
+		remove.addEventListener('click',getRidOfIt )
+
+
+</script>
+</body>
+</html>
