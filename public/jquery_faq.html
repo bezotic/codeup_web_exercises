@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>National Parks</title>
+	<style>
+		h1 {
+			text-align: center;
+		}
+
+		.invisible {
+			display:none;
+			font-weight: bold;	
+		}
+
+	
+	</style>
+</head>
+<body>
+<h1>National Forest Facts</h1>
+<div id="Parks">
+	<a href="" id="toggle">Click to toggle important facts.</a>
+		<dl>
+		    <dt class="sup">Who created the Petrified Forest National Monument?</dt>
+		    <dd class="invisible">Theodore Roosevelt</dd>
+		    <dt class="sup">How much water does California get from its National Forests?</dt>
+		    <dd class="invisible">50%</dd>
+		    <dt class="sup">What is the Sequoia National Forest named after?</dt>
+		    <dd class="invisible">The national forest is named after the giant sequoia tree</dd>
+		    <dt class="sup">How long is The Appalachian Trail</dt>
+		    <dd class="invisible"> It is 2,185 miles long</dd>
+		    <dt class="sup">Where is the deepest cave located?</dt>
+		    <dd class="invisible">The deepest cave is located in New Mexico at Carlsbad Caverns National Park. It is 1,593 ft deep.</dd>
+		    <dt class="sup">How many active volcano's are located in Yellowstone.</dt>
+		    <dd class="invisible">Just one.. but it has the power to destroy us all.</dd>
+		    <dt class="sup">Which is the most visited national park?</dt>
+		    <dd class="invisible">The Great Smoky Mountains</dd>
+		    <dt class="sup">Where is the longest cave located at?</dt>
+		    <dd class="invisible">Mammoth Cave National Park is the longest cave system known to the world, with more than 400 mapped miles of caves.</dd>
+		    <dt class="sup">Where is the highest point in America located?</dt>
+		    <dd class="invisible">The highest point in North America is Mt. McKinley in Denali National Park, which stands at 20,320 feet tall.</dd>
+		    <dt class="sup">Where is the lowest point in America located?</dt>
+		    <dd class="invisible">The lowest point in the Western Hemisphere, Badwater Basin in Death Valley National Park, is 282 ft. below sea level.</dd>
+		</dl>
+</div>
+<div class="ParkNames">
+	<h3>Arches</h3>
+    <ul id="parks">
+        <li>Located in Moab, Utah.</li>
+        <li>76,679 acres</li>
+        <li>Highest elevation is 5,653 feet</li>
+        <li>It was redesignated as a National Park on November 12, 1971.</li>
+    </ul>
+   <h3>Badlands</h3>
+    <ul id="parks">
+        <li>Located in South Dakota</li>
+        <li>64,144 acres</li>
+        <li>the park's highest point is at 3,340 feet </li>
+        <li>It was redesignated a national park on November 10, 1978</li>
+    </ul>
+    <h3>Congaree</h3>
+    <ul id="parks">
+        <li>Located in South Carolina</li>
+        <li>26,546 acres</li>
+        <li>The Congaree River flows through the park</li>
+        <li>It's really cool</li>
+    </ul>
+
+</div>
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>
+"use strict";
+$(document).ready(function() {
+  
+  $("#toggle").click(function(e) {
+  	e.preventDefault();
+  	$('dd').slideToggle();
+  })
+
+$('ul').each(function() {
+	$(this).children().first().css('font-weight','bold');
+	
+
+})
+
+$('li').click(function() {
+	$(this).parent().slideUp();
+})
+
+$('h3').click(function(){
+	$(this).next().slideDown(); //next can get the sibling or other element.
+})
+
+});
+
+
+
+</script>
+</body>
+</html>
