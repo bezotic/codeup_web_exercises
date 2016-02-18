@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather Map</title>
+	<style>
+		#map-canvas {
+           width: 980px;
+           height: 700px;
+           background-color: grey;
+        }
+	</style>
+
+</head>
+<body>
+
+	<div id="container">
+		<h1>Weather Application</h1>
+
+		<h3>San Antonio</h3>
+
+		<div class="row">
+			<div id="day-1">TEST</div>
+			<div id="day-2">TEST</div>
+			<div id="day-3">TEST</div>
+		</div>
+		<div id="map-canvas"></div>
+	</div>
+
+	<form>
+		<p>
+		<input type="text" id="latitude" placeholder="Latitude">
+		<input type="text" id="longitude" placeholder="Longitude">
+		</p>
+		<button type="submit" id="search-form">Search</button>
+	</form>
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script><link>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVHykYeA_nKVY_sBUNZphArU-yEvT0684"></script>
+<script>
+
+(function() {
+	$.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+	    APPID: "c37cfb1fc9efd588a79b2010ca0aa85c",
+	    q:     "San Antonio, TX",
+	    units: "imperial",
+	    cnt:3
+	}).done(function(data) {
+		console.log(data);
+
+		data.list.forEach(function(data, index) {
+	 		var content = "";
+	 		console.log(data);
+		 	  content += '<p id="day-">' +  data.temp.max + '/' + data.temp.min + '</p>';
+		 	  content += '<p id="day-">' + data.weather[0].description + '</p>';
+		 	  content += '<p id="day-">' + data.humidity + '</p>'; 
+		 	  content += '<p id="day-">' + data.speed + '</p>'; 
+		 	    content += '<p id="day-">' + data.pressure + '</p>'; 
+		    $('#day-' + (index + 1)).html(content); //getting the objects of each array
+
+		});
+	
+	});
+
+	
+		
+	
+  // Set our map options
+	        var mapOptions = {
+	            // Set the zoom level
+	            zoom: 10,
+
+	            // This sets the center of the map at our location
+	            center: {
+	                lat:  29.4284595,
+	                lng: -98.492433
+	        },
+
+	        mapTypeId: google.maps.MapTypeId.HYBRID
+	    }
+
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    	
+    	var addressFinder = new google.maps.Geocoder();
+
+    	
+
+})();
+
+</script>
+</body>
+</html>
+
