@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <style>
+		h1 {
+			text-align: center;
+		}
+    </style>
+</head>
+<body>
+    <h1>Konami Code</h1>
+
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script><link>
+    <script>
+        "use strict";
+       // Up, up, down, down, left, right, left, right, b, a
+		var key = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
+		 a = 0;
+		$(document).keydown(function (event) {
+    		if (event.keyCode == key[a++]) {
+        	if (a == key.length) {
+            alert("Congratulations! Now is the fun part."); 
+            window.open("http://codeup.dev/descent_into_madness.html")
+            a = 0;
+		            return false;
+		        }
+		    }
+		    else {
+		        a = 0;
+		    }
+		});
+		   
+
+
+
+    </script>
+</body>
+</html>
+	
+
+
+

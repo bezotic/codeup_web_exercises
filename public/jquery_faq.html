@@ -93,7 +93,26 @@ $('h3').click(function(){
 
 });
 
+$("#my-box").click(function() {
+$(this).animate({
+	"width": "600px",
+	"height": "600px",
+	"font-size":"4em",
 
+
+})
+
+$.ajax('json/test.json').done(function(data){ //ajax requests
+	console.log(data);
+}).fail(function(){
+	console.log("failed");	
+}).always(fucntion(){
+	console.log('this always runs');
+});
+
+
+
+});
 
 </script>
 </body>

@@ -1,0 +1,26 @@
+body {
+        background-color: ;
+         
+    }
+#products {
+        border-style: solid;
+        border-color: black;
+        background-color: #ff751a;
+        height:200px;
+        width: 500px;
+        position:relative;
+        left:350px;
+        top:150px;
+
+    }
+h1 {
+    text-align: center;
+    color:;
+    position:relative;
+    top: 100px;
+    }
+
+.navbar,.navbar-default {
+       position:relative;
+       top:-70px;
+    }

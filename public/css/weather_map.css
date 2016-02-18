@@ -1,0 +1,31 @@
+#map-canvas {
+	width: 980px;
+    height: 700px;
+    background-color: grey;
+    bottom:600px;
+}
+        
+#day-1 {
+	border-style: solid;
+	height:300px;
+	width:350px;
+	background-color: blue;
+}
+
+#day-2 {
+	border-style: solid;
+	height:300px;
+	width:350px;
+	position:relative;
+	left:360px;
+	bottom:305px;
+}
+
+#day-3 {
+	border-style: solid;
+	height:300px;
+	width:350px;
+	position:relative;
+	left:720px;
+	bottom:611px;
+}

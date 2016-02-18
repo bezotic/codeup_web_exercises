@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery excercise</title>
+</head>
+<body>
+<h1 class = "codeup">Welcome to my page. IT is awesome</h1>
+
+<div class ="hello">
+	<h6> It is a pleasure to meet you.</h6>	
+</div>
+	<ul>
+	<li id ='DeLosSantos'> I like eating </li>
+	<li><em> wassup </em></li>
+	<li>Stay golden</li>
+	</ul>
+
+<div class ="wassup">
+	<button type="button" id="hello" class="btn btn-success">Go on and push me.</button>
+</div>
+
+<div class = "paragraph">
+	<ul>
+	<p id ="hey"> hey</p>
+	<p id ="hey"> hey</p>
+	<p id ="hey"> hey</p>
+	<p id ="hey"> hey</p>
+	<p id ="hey"> hey</p>
+	<p id ="hey"> hey</p>
+	<p id ="hey"> hey</p>
+	<p id ="hey"> hey</p>
+	<p id ="hey"> hey</p>
+	<p id ="hey"> hey</p>
+	<p id ="hey"> hey</p>
+	<p id ="hey"> hey</p>
+	<p id ="hey"> hey</p>
+	<p id ="hey"> hey</p>
+	<p id ="hey"> hey</p>
+	<p id ="hey"> hey</p>
+ <script src="//code.jquery.com/jquery-1.12.0.min.js"></script><link>
+<script>
+"use strict";	
+
+var button = document.getElementById('hello');
+
+function press(event) {
+		window.open("http://google.com")
+	
+		
+	
+}
+
+button.addEventListener('click',press )
+
+$(document).ready(function() {
+    // ...
+});
+
+	//$('#DeLosSantos').append(' Pizza');
+
+	//$('.hungry').addClass('boy');
+
+	//$('ul').addClass('me');
+
+	//$('.PushMyButton').addId()
+
+	//$(".codeup").css('background-color', '#003300').css('color', 'white').css('border-style', 'thick').css('border-width', '10px').css('border-color', 'white');
+	
+
+	
+	//$(".codeup").css({
+		//"background-color":"#ff99cc",
+		//"color":"#ffff33",
+		//"border-width": "2px",
+		//"border-style": "thick",
+		//"border-color": "green"
+
+	//});
+
+
+	//$("button").css({
+		//"background-color": "#ff99cc",
+		//"color": "#ffff33",
+
+//});
+
+	//$("body").css("background-color", "#ccf5ff");
+
+	//$("li").css("font-size", "20px");
+
+	//$("p, #hey").css({
+	//	"width": "50px",
+	//	"height": "50px",
+	//	"padding":"10px",
+	///	"margin-top": "50px",
+		//"margin-right":"50px",
+	//	"color":"#ffff00",
+	//	"background-color": "#0099ff"
+	//});
+
+	//$("h1, p, li").css("background-color", ""#ccf5ff");
+	// object.init
+	//			var that = this;
+	//			var self = this;
+            
+      //      $('#codeup').click(function(event) {
+        //    	console.log(event);
+          //  	console.log(this);
+           
+            //});
+
+	$('h1').click(
+     	  function() {
+          $(this).css('background-color', 'blue');
+    });
+
+	$('p').dblclick(
+		function() {
+        $(this).css('font-size', '16px');
+    });
+
+    $('li').hover(
+     	  function() {
+          $(this).css('background-color', 'red');
+    });
+
+   $('li').hover(
+     	  function() {
+
+    $("nav-links a").click(function(e){
+    	e.preventDefault();
+    	$("nav-links a").removeClass("active");
+    	$(this)addClass("active")
+    });
+
+    console.log($(this.).attr("href"));
+    $(this).attr("href", http://codeup.com"); //you can chain methods bruh bruh.
+
+    var text = $(this).text();
+   console.log($(this).data("target")); // data function, can modify the data.
+
+   
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animate</title>
+    <style>
+        html, body {
+            margin: 0px;
+            padding: 0;
+        }
+
+        #btn-animate {
+            margin: 15px;
+        }
+
+        #animate-box {
+            background-color: #000033;
+            height: 250px;
+            margin: 15px;
+            position: relative;
+            width: 250px;
+            border-style: solid;
+            border-bottom-color: red;
+            color:white;
+            text-align: center;
+        }
+       .first_steps {
+            display:none;
+            text-align: center;
+       }
+    </style>
+</head>
+<body>
+<h1>The Game of Life!</h1>
+<h1 class="first_steps" id="baby">Baby Steps!</h1>
+<h1 class="first_steps" id="growthSpurth">Looks like you've hit a growth spurt ma boy!</h1>
+<h1 class="first_steps" id="highSchool">Puberty, confidence dimming, don't make a noise, they attack weakness.</h1> 
+<h1 class="first_steps" id="midLife">Bam! A glowing hue resides within you. Spouse, children, house, evolutionary purpose served.</h1> 
+<h1 class="first_steps" id="death">Not a bang but a whimper, better luck next time. Try to correct your mistakes, quit that job you hate! Farewell, unitl next time. There are infinite next times.</h1> 
+    <p>
+        <button id="btn-move">Move It</button>
+        <button id="btn-scale">Scale It</button>
+        <button id="btn-hide">Hide It</button>
+        <button id="btn-show">Show It</button>
+        <button id="btn-all">Animate All</button>
+    </p>
+
+    <div id="animate-box"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        "use strict";
+        $("#btn-move").click(function(){
+            $("#animate-box").animate({"left":"+=100px",});
+            $("#baby").removeClass("first_steps");
+            
+           
+
+        })
+        
+        $("#btn-scale").click(function(){
+            $("#animate-box").animate({"width":"50%",});
+            $("#baby").addClass("first_steps");
+            $("#growthSpurth").removeClass("first_steps");
+        })    
+       
+        $("#btn-hide").click(function(){
+            $("#animate-box").animate({"opacity":"0"});
+            $("#growthSpurth").addClass("first_steps");
+            $("#highSchool").removeClass("first_steps");
+        })     
+
+        $("#btn-show").click(function(){
+            $("#animate-box").animate({"opacity":"1"},3000);
+            $("#highSchool").addClass("first_steps");
+            $("#midLife").removeClass("first_steps");
+        })
+
+        $("#btn-all").click(function(){
+            $("#animate-box").animate({"left":"-100px", "width": "25%"},1500).animate({"opacity":"0",},10000).append("<p>youre Dead!</p>");
+            $("#midLife").addClass("first_steps");
+            $("#death").removeClass("first_steps");
+
+        })
+
+        
+   });
+    </script>
+</body>
+</html>
+
+
+

@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="/css/weather_map.css">
 	<title>Weather Map</title>
-	<style>
-		#map-canvas {
-           width: 980px;
-           height: 700px;
-           background-color: grey;
-        }
-	</style>
-
 </head>
 <body>
 
@@ -19,9 +12,9 @@
 		<h3>San Antonio</h3>
 
 		<div class="row">
-			<div id="day-1">TEST</div>
-			<div id="day-2">TEST</div>
-			<div id="day-3">TEST</div>
+			<div id="day-1"></div>
+			<div id="day-2"></div>
+			<div id="day-3"></div>
 		</div>
 		<div id="map-canvas"></div>
 	</div>
@@ -49,16 +42,16 @@
 		data.list.forEach(function(data, index) {
 	 		var content = "";
 	 		console.log(data);
-		 	  content += '<p id="day-">' +  data.temp.max + '/' + data.temp.min + '</p>';
+		 	  content += '<p id="day-">' + "degrees:" + data.temp.max + '/' + + data.temp.min + '</p>';
 		 	  content += '<p id="day-">' + data.weather[0].description + '</p>';
-		 	  content += '<p id="day-">' + data.humidity + '</p>'; 
-		 	  content += '<p id="day-">' + data.speed + '</p>'; 
-		 	    content += '<p id="day-">' + data.pressure + '</p>'; 
+		 	  content += '<p id="day-">' + "Humidity: " + data.humidity + '</p>'; 
+		 	  content += '<p id="day-">' + "Wind: " + data.speed + '</p>'; 
+		 	    content += '<p id="day-">' + "Pressure: " + data.pressure + '</p>'; 
 		    $('#day-' + (index + 1)).html(content); //getting the objects of each array
 
 		});
 	
-	});
+		});
 
 	
 		

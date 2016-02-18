@@ -86,7 +86,9 @@ document.getElementsByTagName('button')[0].addEventListener
 
 
 
-
+var listener = fuction (event) {
+    console.log(event);
+}
 
 
 
