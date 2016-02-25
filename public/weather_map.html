@@ -9,7 +9,7 @@
 	<div id="container">
 		<h1>Weather Application</h1>
 
-		<h3 class="city">San Antonio</h3>
+		<h3 id="city">San Antonio</h3>
 		<img id="bacon" src="/img/bacon.jpg" alt="bacon and eggs">
 
 		<div class="row">
@@ -25,36 +25,59 @@
 		<input  type="text" id="longitude" placeholder="Longitude">
 		<button type="submit" id="search-form">Search</button>	
 	</form>
-
-<script src="//code.jquery.com/jquery-1.12.0.min.js"></script><link>
+	<p>
+		<button id="push">hungry</button>
+		<h1 class="eat" id="us"></h1>
+	</p>
+	<div id="images"</div>
+		<img id="baconz" src="/img/bacon_strip.jpg" alt="bacon and eggs">
+		<img id="pancakez" src="/img/pancake.jpg" alt="bacon and eggs">
+		<img id="babez" src="/img/bacon.jpg" alt="bacon and eggs">
+	</div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVHykYeA_nKVY_sBUNZphArU-yEvT0684"></script>
 <script>
 
+$(document).ready(function() {
+		$("#push").click(function(){
+	    $("#baconz").animate({"bottom":"550px",});
+	    $("#pancakez").animate({"bottom":"550px",},800);
+	    $("#babez").animate({"bottom":"550px",},1500);
+	    $("#us").append("<p>Eat Us We're Delicious!</p>").show(3000);
+	   	
+		
+		})
+});
+		
+	           	     
 (function() {
 	var updateWeatherContent = function(data, index) {
+		
  		var content = "";
  		var icon = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
- 		console.log(data);
+ 		
 	 	  content += '<p>' + "degrees:" + Math.round(data.temp.max) + '&deg;' + '/' 
 	 	  +  Math.round(data.temp.min) + '&deg' + '</p>';
 	 	  content += '<p><img src="' + icon + '"></p>';
 	 	  content += '<p>' + data.weather[0].description + '</p>';
 	 	  content += '<p>' + "Humidity: " + data.humidity + '</p>'; 
 	 	  content += '<p>' + "Wind: " + data.speed + '</p>'; 
-	 	  content += '<p>' + "Pressure: " + data.pressure + '</p>'; 
-	      $('#day-' + (index + 1)).html(content); 
-
-	};
-
+	 	  content += '<p>' + "Pressure: " + data.pressure + '</p>';
+	      $('#day-' + (index + 1)).html(content);
+	     
+	}; 
+		 
 	$.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
 	    APPID: "c37cfb1fc9efd588a79b2010ca0aa85c",
 	    q:     "San Antonio, TX",
 	    units: "imperial",
 	    cnt:3
 	}).done(function(data) {
-		console.log(data);
-		data.list.forEach(updateWeatherContent);
 	
+
+		data.list.forEach(updateWeatherContent);
+		
+		
 	   });
 
 	        var mapOptions = {
@@ -70,8 +93,7 @@
 	    	}
 
      
-        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-    
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);    
     	
     	function richardWeather () { 
 	        var latitude = Number($("#latitude").val()); 
@@ -116,6 +138,7 @@
 	    cnt:3
 	}).done(function(data) {	
 		console.log(data);
+		$('#city').html(data.city.name); 
 		data.list.forEach(updateWeatherContent);
 
 	});    
@@ -123,11 +146,9 @@
 	}
 
 	$("#search-form").click (function(e){
-	  e.preventDefault();console.log('ll')
+	  e.preventDefault();
 	  richardWeather(); 
 	});
-
-
 
   
 })();
