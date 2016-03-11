@@ -23,7 +23,7 @@ var_dump($items);
 
 
 
-
+$things = ['Basketball', 'Pizza', 'Sleeping', 'Lurking', 'frying food'];
 
 
 

@@ -1,12 +1,21 @@
 <?php
+require_once('../Input.php');
 
 function pageController() {
-	if(!isset($_GET['counter']) && !isset($_GET['status'])) {
-		$_GET['counter'] = 0;
-		$_GET['status'] = "Start Over";
+
+	$counter = 0;
+	$status = 'game over';
+
+	if(Input::has('counter') && Input::has('status')) {
+		 	$counter = Input::get('counter');
+			$status =Input::get('status');
 	}
-	return $_GET;
-	
+
+	return array(
+
+		'counter'=>$counter,
+		'status' => $status
+	);
 	
 
 }
@@ -21,10 +30,10 @@ extract(pageController());
 	<meta charset="UTF-8">
 	<title>Pong</title>
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-	<style>
+<style>
 
 	body {
-		background-color: #f5ffd6;
+		background-color: #ffeedd;
 	}
 
 	h1 {
@@ -48,8 +57,8 @@ extract(pageController());
 </head>
 <body>
 <h1>Pong</h1>
-<h1><?=$counter?></h1>
-<a class='hit' href="/ping.php?counter=<?=$counter+1;?> & Status=HIT ">HIT</a>
+<h1><?=$counter;?></h1>
+<a class='hit' href="/ping.php?counter=<?=$counter+1;?>&status=HIT">HIT</a>
 <a class='miss' href="/ping.php?counter=0&status=MISS">MISS</a>
 <img src="/img/pong.jpeg" class="pong"></img>
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script><link>
@@ -57,12 +66,6 @@ extract(pageController());
 "use strict";
 
 
- $(".miss").click(function(){
-          $(".ping").hide()
-
-
-
-  })
 
 
 
