@@ -1,0 +1,134 @@
+.sidebar {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    position: absolute;
+    top:118px;
+    height: 100%;
+    width: 400px;
+    margin:0;
+    padding:0;
+    overflow-y: scroll;
+
+
+}
+
+.header {
+	 background-color: blue;
+    height: 200px;
+    padding: 50px;
+    margin: -100px;
+}
+
+#power {
+	text-align: right;
+}
+
+h2 {
+	text-align: left;
+}
+
+#dp_swf_engine {
+    display: none;
+}
+
+html {
+    overflow: hidden;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+body {
+    height: 100%;
+    overflow: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-container {
+    width: 380px;
+    padding:10px;
+}
+
+
+
+.line {
+    height:1px;
+
+    background:#717171;
+
+    border-bottom:2px solid white;
+
+    box-shadow: 1.5px 1.5px 2px #888888;
+
+}
+
+.btn-default:hover {
+    background-color:#1D9F75;
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+  
+}
+
+.btn-default {
+    box-shadow: 1.5px 1.5px 2px #888888;
+
+}
+
+
+.checkboxes {
+    padding-right: 10px;
+}
+
+.reset-text {
+    font-family: 'TitilliumTextRegular', cursive;
+    font-size: 12px;
+    color: #999999;
+    line-height: 15px;
+    text-align: center;
+    padding-top:10px;
+}
+
+   #reset {
+    position:relative;
+    left:40%;
+    top: 30px;
+    
+}
+   
+#reset-line {
+    position:relative;
+    top:30px;
+}
+
+ #connect {
+    postion:relative;
+    top:150px;
+    font-family: 'TitilliumTextRegular', cursive;
+    font-size: 12px;
+    color: #999999;
+    line-height: 15px;
+    text-align: center;
+    padding-top:10px;
+}
+
+#leave {
+    padding:30px;
+}
+
+#connect-btn {
+    position:relative;
+    left:36%;
+    top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

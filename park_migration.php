@@ -1,12 +1,6 @@
 <?php 
 
-define('DB_HOST','127.0.0.1' );
 
-define('DB_NAME', 'parks_db');
-
-define('DB_USER', 'parks_user');
-
-define('DB_PASS', 'password');
 
 require 'db_connect.php';
 
@@ -28,6 +22,8 @@ $createTable = 'CREATE TABLE national_parks (
     city  VARCHAR(300) NOT NULL,
     date_established date,
     area_in_acres double,
+    img VARCHAR(50) NOT NULL,
+    description TEXT NOT NULL,
     PRIMARY KEY (national_parks_id)
 )';
 

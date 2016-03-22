@@ -1,0 +1,44 @@
+html {
+	text-align: center;
+	color:white;
+}
+
+
+.line {
+    height:1px;
+
+    background:#717171;
+
+    border-bottom:2px solid white;
+
+    box-shadow: 1.5px 1.5px 2px #888888;
+
+}
+
+body {
+	background-color: #FFE3B5;
+
+}
+
+a {
+	
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+     box-shadow: 1.5px 1.5px 2px #888888;
+}
+
+.links {
+	color:blue;
+}
+
+.form-control {
+	width: 400px;
+	position:relative;
+	left:35%;
+}
+
+.submit {
+	position:relative;
+	bottom:30px;
+	left:240px;
+}

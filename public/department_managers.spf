@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>parks_db</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>kcid</key>
+			<string>675127703171997824</string>
+			<key>name</key>
+			<string>Codeup Vagrant</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>ssh_host</key>
+			<string>192.168.77.77</string>
+			<key>ssh_keyLocation</key>
+			<string></string>
+			<key>ssh_keyLocationEnabled</key>
+			<integer>0</integer>
+			<key>ssh_user</key>
+			<string>vagrant</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPSSHTunnelConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>vagrant</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentFilter</key>
+			<dict/>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK0HCBUWFxgZHSQoLDA0VSRudWxs0wkK
+			CwwQFFdOUy5rZXlzWk5TLm9iamVjdHNWJGNsYXNzow0OD4ACgAOA
+			BKMREhOABYAGgAiADFR0eXBlVHJvd3NUa2V5c18QJlNlbGVjdGlv
+			bkRldGFpbFR5cGVQcmltYXJ5S2V5ZWREZXRhaWxz0wkKCxobHKCg
+			gAfSHh8gIVokY2xhc3NuYW1lWCRjbGFzc2VzXxATTlNNdXRhYmxl
+			RGljdGlvbmFyeaMgIiNcTlNEaWN0aW9uYXJ5WE5TT2JqZWN00goL
+			JSehJoAJgAvSCykqK1lOUy5zdHJpbmeACl8QEW5hdGlvbmFsX3Bh
+			cmtzX2lk0h4fLS5fEA9OU011dGFibGVTdHJpbmejLS8jWE5TU3Ry
+			aW5n0h4fMTJeTlNNdXRhYmxlQXJyYXmjMTMjV05TQXJyYXnSHh8i
+			NaIiI18QD05TS2V5ZWRBcmNoaXZlctE4OVRkYXRhgAEACAARABoA
+			IwAtADIANwBFAEsAUgBaAGUAbABwAHIAdAB2AHoAfAB+AIAAggCH
+			AIwAkQC6AMEAwgDDAMUAygDVAN4A9AD4AQUBDgETARUBFwEZAR4B
+			KAEqAT4BQwFVAVkBYgFnAXYBegGCAYcBigGcAZ8BpAAAAAAAAAIB
+			AAAAAAAAADoAAAAAAAAAAAAAAAAAAAGm
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{1, 0}, {745, 475}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>
+</string>
+			<key>table</key>
+			<string>national_parks</string>
+			<key>view</key>
+			<string>SP_VIEW_CONTENT</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>202</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>GRANT ALL ON parks_db.* TO 'parks_user'@'localhost'</string>
+		<string>GRANT ALL ON *.parks_db TO 'parks_user'@'localhost'</string>
+		<string>CREATE USER 'parks_user'@'localhost' IDENTIFIED BY 'password'</string>
+		<string>SELECT AVG(salary), gender
+FROM salaries s
+JOIN dept_manager AS dm ON dm.emp_no = s.emp_no
+JOIN employees AS e ON e.emp_no = dm.emp_no
+WHERE s.to_date &gt; now()
+AND dm.to_date &gt; now()
+GROUP BY gender</string>
+		<string>SELECT AVG(salary), gender
+FROM salaries s
+JOIN dept_manager AS dm ON dm.emp_no = s.emp_no
+JOIN employees AS e ON e.emp_no = dm.emp_no
+GROUP BY gender</string>
+		<string>SELECT AVG(salary)
+FROM employees
+WHERE emp_no IN (
+SELECT emp_no
+FROM dept_manager
+WHERE gender = 'F'
+OR gender = 'M'
+	AND emp_no IN (
+	SELECT emp_no
+	FROM salaries
+	WHERE to_date = now()
+	
+	)
+
+)</string>
+		<string>SELECT first_name, last_name, gender
+FROM employees
+WHERE emp_no IN (
+SELECT emp_no
+FROM dept_manager
+WHERE gender = 'F'
+OR gender = 'M'
+	AND emp_no IN (
+	SELECT emp_no
+	FROM salaries
+	WHERE to_date = now()
+	
+	)
+
+)</string>
+		<string>SELECT first_name, last_name, gender
+FROM employees
+WHERE emp_no IN (
+SELECT emp_no
+FROM dept_manager
+WHERE gender = 'F'
+OR gender = 'M'
+	WHERE emp_no IN (
+	SELECT emp_no
+	FROM salaries
+	AND to_date = now()
+	
+	)
+
+)</string>
+		<string>SELECT first_name, last_name, gender
+FROM employees
+WHERE emp_no IN (
+SELECT emp_no
+FROM dept_manager
+WHERE gender = 'F'
+OR gender = 'M'
+	WHERE emp_no IN (
+	SELECT emp_no
+	FROM salaries
+	WHERE to_date = now()
+	
+	)
+
+)</string>
+		<string>SELECT first_name, last_name, gender
+FROM employees
+WHERE emp_no IN (
+SELECT emp_no
+FROM dept_manager
+WHERE gender = 'F'
+OR gender = 'M'
+
+
+)</string>
+		<string>SELECT first_name, last_name, gender
+FROM employees
+WHERE emp_no IN (
+SELECT emp_no
+FROM dept_manager
+WHERE gender = 'F'
+AND gender = 'M'
+
+
+)</string>
+		<string>SELECT first_name, last_name, gender
+FROM employees
+WHERE emp_no IN (
+SELECT emp_no
+FROM dept_manager
+WHERE gender = 'F'
+
+
+
+)</string>
+		<string>SELECT first_name, last_name, gender
+FROM employees
+WHERE emp_no IN (
+SELECT emp_no
+FROM dept_managers
+WHERE gender = 'F'
+
+
+
+)</string>
+		<string>SELECT first_name, last_name, gender
+FROM employees
+WHERE emp_no IN (
+SELECT emp_no 
+FROM dept_manager
+WHERE gender = 'F'
+	WHERE dept_no IN (
+	SELECT dept_no
+	FROM departments	
+	)
+
+)</string>
+		<string>SELECT first_name, last_name, gender
+FROM employees
+WHERE dept_no IN (
+	SELECT dept_no
+	FROM departments
+	WHERE emp_no IN (
+	SELECT emp_no 
+	FROM dept_manager
+	WHERE gender = 'F'
+	)
+
+
+)</string>
+		<string>SELECT first_name, last_name, gender
+FROM employees
+WHERE dept_no IN (
+	SELECT dept_no
+	FROM departments
+
+)
+WHERE emp_no IN (
+SELECT emp_no 
+FROM dept_manager
+WHERE gender = 'F'
+
+
+
+)</string>
+		<string>SELECT first_name, last_name, gender
+FROM employees
+WHERE emp_no IN (
+SELECT emp_no 
+FROM dept_manager
+WHERE gender = 'F'
+
+
+)</string>
+		<string>SELECT first_name , last_name 
+FROM employees
+WHERE emp_no IN (
+SELECT emp_no
+FROM titles
+	WHERE emp_no IN (
+	SELECT emp_no
+	FROM employees
+	WHERE first_name = 'Aamod'
+	)
+
+)</string>
+		<string>SELECT first_name , last_name, 
+FROM employees
+WHERE emp_no IN (
+SELECT emp_no
+FROM titles
+	WHERE emp_no IN (
+	SELECT emp_no
+	FROM employees
+	WHERE first_name = 'Aamod'
+	)
+
+)</string>
+		<string>SELECT first_name , last_name, 
+FROM employees
+WHERE title IN (
+SELECT title
+FROM titles
+	WHERE first_name IN (
+	SELECT first_name
+	FROM employees
+	WHERE first_name = 'Aamod'
+	)
+
+)</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.5.46-0ubuntu0.14.04.2-log</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
